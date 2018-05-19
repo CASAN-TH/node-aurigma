@@ -1,0 +1,21 @@
+{
+  "name": "aurigma",
+  "version": "1.0.0",
+  "description": "aurigma uploader",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "aurigma",
+    "uploader",
+    "with",
+    "node.js"
+  ],
+  "author": "jigkoh3@hotmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "formidable": "^1.2.1",
+    "xml": "^1.0.1"
+  }
+}

@@ -1,0 +1,110 @@
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>
+		Aurigma Upload Suite 8 Demo Applications&nbsp;&mdash;&nbsp;Basic demo (node.js)
+	</title>
+	<link href="./styles/style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<form id="form1" class="page">
+		<div id="container">
+			<div id="header">
+				<div id="header-inner">
+					<a class="logo" href="#" title="Aurigma">
+						<img src="./styles/logo_dark.png" alt="Aurigma logo" />
+					</a>
+				</div>
+			</div>
+			<div id="center">
+				<div>
+					<div>
+						<h1 class="header2">Basic demo</h1>
+						<p>
+							This simple application is a quick start demo with minimum settings.
+						</p>
+						<div class="demo">
+							<div class="inner">
+								<div class="container">
+									<div class="code">
+										<link href="./Scripts/css/aurigma.htmluploader.control.css" rel="stylesheet" type="text/css" />
+										<script src="./Scripts/aurigma.imageuploaderflash.min.js" type="text/javascript"></script>
+										<script src="./Scripts/aurigma.htmluploader.control.js" type="text/javascript"></script>
+										<script type="text/javascript">
+											var uploader = $au.imageUploaderFlash({
+												id: 'Uploader1',
+												width: '95%',
+												height: '500px',
+												licenseKey: '77FF4-004C7-D22D8-B148B-14D40-A3B627',
+												enableDescriptionEditor: false,
+												enableRotation: false,
+												enableImageEditor: false,
+												uploadSettings: {
+													actionUrl: 'upload',
+													redirectUrl: 'gallery',
+													filesPerPackage: 1
+												},
+												converters: [
+													{ mode: '*.*=SourceFile' },
+													{ mode: '*.*=Thumbnail;*.*=Icon', thumbnailFitMode: 'Fit', thumbnailWidth: '120', thumbnailHeight: '120' }
+												],
+												folderPane: {
+													height: 370
+												},
+												uploadPane: {
+													viewMode: 'List'
+												},
+												restrictions: {
+													fileMask: '*.jpg;*.jpeg;*.png'
+												}
+											});
+
+											// var ip = $au.installationProgress(uploader);
+											// ip.progressImageUrl('aurigma/installation_progress.gif');
+											// ip.progressCssClass('ip-progress');
+											// ip.instructionsCssClass('ip-instructions');
+
+											uploader.writeHtml();
+										</script>
+										
+									</div>
+								</div>
+							</div>
+						</div>
+						<ul class="tabs">
+							<li class="selected">
+								<span>Description</span>
+							</li>
+						</ul>
+						<div class="tab-containers">
+							<div class="tab-container">
+								<div class="tab-inner">
+									<p>
+										This demo application is quick start demo with minimum set of settings. The application demonstrates how to:</p>
+									<ul>
+										<li>Filter files to display only JPEGs.</li>
+										<li>Upload the original file along with 120x120 thumbnail.</li>
+										<li>Receive files on server and put them to a destination folder.</li>
+										<li>Redirect to another page after successful upload.</li>
+									</ul>
+									<p>
+										After the upload process completes uploader redirects you to a page containing links to the uploaded files.</p>
+									<p class="license-description">
+										This demo application works with any edition of Upload Suite (
+										<strong>Express</strong>,
+										<strong>Professional</strong>, and
+										<strong>Premium</strong>).</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="footer">&copy; 1999-2013 Aurigma, Inc.</div>
+		</div>
+	</form>
+</body>
+
+</html>
