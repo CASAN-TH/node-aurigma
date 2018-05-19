@@ -171,10 +171,10 @@ function return404(response, pathname) {
 Made for convenience - you can load this code to Cloud9 IDE or 
 run it locally without having to change the code. 
 */
-var ip = '127.0.0.1';
-var port = 8765;
-if (process.env.PORT === undefined) { process.env.PORT = port; }
-if (process.env.IP === undefined) { process.env.IP = ip; }
+// var ip = '127.0.0.1';
+// var port = 8765;
+// if (process.env.PORT === undefined) { process.env.PORT = port; }
+// if (process.env.IP === undefined) { process.env.IP = ip; }
 
 /*
 Make sure that gallery and gallery/thumbnail folders exist. 
@@ -222,5 +222,5 @@ http.createServer(function (request, response) {
             return404(response, pathname);
         }
     }
-}).listen(process.env.PORT, process.env.IP);
-console.log("Running Aurigma sample server (%s:%s)...", process.env.IP, process.env.PORT);
+}).listen(process.env.PORT || 3000);
+console.log("Running Aurigma sample server (localhost:%s)...",  process.env.PORT || 3000);
